@@ -3,49 +3,49 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cinder", "..\..\..\proj\vc2015\cinder.vcxproj", "{92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "cinder", "..\..\..\proj\vc2017\cinder.vcxproj", "{92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeviceTest", "..\DeviceTest\vc2015\DeviceTest.vcxproj", "{74DC81AA-4A14-4966-BB88-794EB0C0F354}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeviceTest", "..\DeviceTest\vc2017\DeviceTest.vcxproj", "{74DC81AA-4A14-4966-BB88-794EB0C0F354}"
 	ProjectSection(ProjectDependencies) = postProject
 		{92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE} = {92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NodeEffectsTest", "..\NodeEffectsTest\vc2015\NodeEffectsTest.vcxproj", "{A4E4C761-C966-49BC-B393-7DB37AD2D367}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NodeEffectsTest", "..\NodeEffectsTest\vc2017\NodeEffectsTest.vcxproj", "{A4E4C761-C966-49BC-B393-7DB37AD2D367}"
 	ProjectSection(ProjectDependencies) = postProject
 		{92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE} = {92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NodeTest", "..\NodeTest\vc2015\NodeTest.vcxproj", "{F9F68040-3C5E-4DBE-B809-FD0BF117E5BA}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "NodeTest", "..\NodeTest\vc2017\NodeTest.vcxproj", "{F9F68040-3C5E-4DBE-B809-FD0BF117E5BA}"
 	ProjectSection(ProjectDependencies) = postProject
 		{92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE} = {92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ParamTest", "..\ParamTest\vc2015\ParamTest.vcxproj", "{A8EA7518-49AF-4238-B769-DB509F20342F}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ParamTest", "..\ParamTest\vc2017\ParamTest.vcxproj", "{A8EA7518-49AF-4238-B769-DB509F20342F}"
 	ProjectSection(ProjectDependencies) = postProject
 		{92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE} = {92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SampleTest", "..\SampleTest\vc2015\SampleTest.vcxproj", "{20E84023-6E68-4387-B158-0A13FDA53646}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SampleTest", "..\SampleTest\vc2017\SampleTest.vcxproj", "{20E84023-6E68-4387-B158-0A13FDA53646}"
 	ProjectSection(ProjectDependencies) = postProject
 		{92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE} = {92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpectralTest", "..\SpectralTest\vc2015\SpectralTest.vcxproj", "{A576F01A-FF4D-44BE-BB7F-D589F7F3A376}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SpectralTest", "..\SpectralTest\vc2017\SpectralTest.vcxproj", "{A576F01A-FF4D-44BE-BB7F-D589F7F3A376}"
 	ProjectSection(ProjectDependencies) = postProject
 		{92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE} = {92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StressTest", "..\StressTest\vc2015\StressTest.vcxproj", "{1620909D-C0A6-4C43-BB27-1AA36859A81E}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "StressTest", "..\StressTest\vc2017\StressTest.vcxproj", "{1620909D-C0A6-4C43-BB27-1AA36859A81E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE} = {92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VoiceTest", "..\VoiceTest\vc2015\VoiceTest.vcxproj", "{98CAE2B2-EEA1-40AF-9A94-9EAC23268D25}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VoiceTest", "..\VoiceTest\vc2017\VoiceTest.vcxproj", "{98CAE2B2-EEA1-40AF-9A94-9EAC23268D25}"
 	ProjectSection(ProjectDependencies) = postProject
 		{92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE} = {92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WaveTableTest", "..\WaveTableTest\vc2015\WaveTableTest.vcxproj", "{276DA6AE-F82B-4757-9A51-9E1C9BCE12B2}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WaveTableTest", "..\WaveTableTest\vc2017\WaveTableTest.vcxproj", "{276DA6AE-F82B-4757-9A51-9E1C9BCE12B2}"
 	ProjectSection(ProjectDependencies) = postProject
 		{92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE} = {92B5BE70-DCAA-40E4-92D8-CC2B95AA28BE}
 	EndProjectSection

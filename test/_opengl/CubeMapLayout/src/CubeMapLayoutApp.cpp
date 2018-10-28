@@ -1,7 +1,7 @@
 #include "cinder/app/App.h"
 #include "cinder/app/RendererGl.h"
 #include "cinder/params/Params.h"
-#include "cinder/MayaCamUI.h"
+#include "cinder/CameraUi.h"
 #include "cinder/Camera.h"
 #include "cinder/gl/GlslProg.h"
 #include "cinder/gl/Texture.h"
@@ -14,7 +14,7 @@ using namespace std;
 
 class CubeMapLayoutApp : public App {
   public:
-	void prepareSettings ( Settings * settings );
+	static void prepareSettings ( Settings * settings );
 	void setup() override;
 	void mouseDown( MouseEvent event ) override;
 	void mouseDrag( MouseEvent event ) override;
@@ -24,7 +24,8 @@ class CubeMapLayoutApp : public App {
 	int mSelectedCubeMap;
 	gl::BatchRef mCube;
 	params::InterfaceGlRef mParams;
-	MayaCamUI mMayaCam;
+	CameraUi mMayaCam;
+	CameraPersp mMayaCamCamera;
 };
 
 void CubeMapLayoutApp::prepareSettings( Settings * settings )
@@ -52,11 +53,11 @@ void CubeMapLayoutApp::setup()
 	mCubeMaps.push_back( gl::TextureCubeMap::create( loadImage( loadAsset( "horizontal.png" ) ) ) );
 	mCubeMaps.push_back( gl::TextureCubeMap::create( loadImage( loadAsset( "vertical.hdr" ) ) ) );
 	
-	CameraPersp cam( getWindowWidth(), getWindowHeight(), 60.0, 0.1f, 1000.0f );
-	cam.setEyePoint( vec3( 0, 0, 10 ) );
-	cam.setCenterOfInterestPoint( vec3(0) );
+	mMayaCamCamera = CameraPersp( getWindowWidth(), getWindowHeight(), 60.0, 0.1f, 1000.0f );
+	mMayaCamCamera.setEyePoint( vec3( 0, 0, 10 ) );
+	mMayaCamCamera.lookAt( vec3(0) );
 	
-	mMayaCam.setCurrentCam( cam );
+	mMayaCam.setCamera( &mMayaCamCamera );
 }
 
 void CubeMapLayoutApp::mouseDown( MouseEvent event )
@@ -82,4 +83,4 @@ void CubeMapLayoutApp::draw()
 	mParams->draw();
 }
 
-CINDER_APP( CubeMapLayoutApp, RendererGl )
+CINDER_APP( CubeMapLayoutApp, RendererGl, &CubeMapLayoutApp::prepareSettings )

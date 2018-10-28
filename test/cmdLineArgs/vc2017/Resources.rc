@@ -1,4 +1,4 @@
-#include "cinder/CinderResources.h"
+#include "Resources.h"
 
 ID ICON "..\\..\\..\\samples\\data\\cinder_app_icon.ico"
 
