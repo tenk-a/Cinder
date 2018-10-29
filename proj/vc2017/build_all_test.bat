@@ -1,17 +1,17 @@
 rem @echo off
-if "%VS141_DIR%"=="" call set_vs2017.bat
+if "%VS150COMNTOOLS%"=="" call set_vs2017.bat
 
 setlocal
 
 pushd ..\..\test
 
-call "%VC141_DIR%\VC\Auxiliary\Build\vcvars32.bat"
-rem call :cmpls Win32 Release
-call :cmpls Win32 Debug
+call "%VS150COMNTOOLS%..\..\VC\Auxiliary\Build\vcvars64.bat"
+call :cmpls x64 Release
+call :cmpls x64 Debug
 
-rem call "%VC141_DIR%\VC\Auxiliary\Build\vcvars64.bat"
-rem call :cmpls x64 Release
-rem call :cmpls x64 Debug
+call "%VS150COMNTOOLS%..\..\VC\Auxiliary\Build\vcvars32.bat"
+call :cmpls Win32 Release
+call :cmpls Win32 Debug
 
 popd
 
