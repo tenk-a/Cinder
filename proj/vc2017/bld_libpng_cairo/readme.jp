@@ -1,0 +1,17 @@
+vc2017(vc14.1) 用 libpng.lib, pixman-1.lib, cairo-static.lib のビルド.
+
+1. git を使えるようパスを通した状態にする.
+
+2. mozilla-build をインストールする. c:\mozilla-build ができる.
+
+3. download.bat を実行してライブラリのソースと、ビルド用バッチを取得する.
+
+4. bld_lib_bat/libs_config.bat の  
+     set CcMingw32Make=c:\mozilla-build\bin\mozmake.exe  
+     set CcMsys1Paths=C:\mozilla-build\msys\local\bin;C:\mozilla-build\msys\bin  
+     
+  をあなたの環境にあわせる. pixman,cairoのビルドに必要.  
+
+5. build.bat を実行する.
+
+6. copy_to.bat を実行する.
