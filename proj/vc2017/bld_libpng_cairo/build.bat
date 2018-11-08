@@ -1,7 +1,7 @@
 set VcVer=vc141
-pushd bld_lib_bat
-call bld_zlib.bat   %VcVer%
-call bld_libpng.bat %VcVer%
-call bld_pixman.bat %VcVer%
-call bld_cairo.bat  %VcVer%
+pushd %~dp0bld_lib_bat
+call bld_zlib.bat   %VcVer% static release
+call bld_libpng.bat %VcVer% static release
+call bld_pixman.bat %VcVer% static release
+call bld_cairo.bat  %VcVer% static release
 popd
