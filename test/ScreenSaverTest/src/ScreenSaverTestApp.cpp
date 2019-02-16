@@ -65,7 +65,6 @@ void prepareSettings( AppScreenSaver::Settings *settings )
 ScreenSaverTestApp::ScreenSaverTestApp()
 {
 #if LOAD_LOGO_IN_CONSTRUCTOR
-	//log::manager()->enableSystemLogging();
 	std::shared_ptr<log::LoggerSystem> sysLogger = log::makeLogger<log::LoggerSystem>();
 	sysLogger->setLoggingLevel(log::LEVEL_WARNING);
 	loadLogo();
@@ -74,7 +73,6 @@ ScreenSaverTestApp::ScreenSaverTestApp()
 
 void ScreenSaverTestApp::setup()
 {
-	//log::manager()->enableSystemLogging();
 	std::shared_ptr<log::LoggerSystem> sysLogger = log::makeLogger<log::LoggerSystem>();
 	sysLogger->setLoggingLevel(log::LEVEL_WARNING);
 

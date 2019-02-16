@@ -6,10 +6,6 @@
 #include "cinder/Rand.h"
 #include "cinder/Log.h"
 
-#if _MSC_VER >= 1900 && _MSC_VER <= 1915	// no fs::unique_path
-#define NO_FS_UNIQUE_PATH
-#endif
-
 using namespace ci;
 using namespace ci::app;
 using namespace std;
@@ -26,13 +22,12 @@ class streamFileTestApp : public App {
 
 fs::path streamFileTestApp::createReadTestFile()
 {
-#ifdef NO_FS_UNIQUE_PATH
+    // unique_path() is not in std::filesystem. 
+	//fs::path resultPath = fs::unique_path( getAppPath() / "cinder_streamFileTest-%%%%-%%%%-%%%%-%%%%" );
 	char buff[256] = { 0 };
 	snprintf(buff, 255, "cinder_streamFileTest-%llu", (unsigned long long)time(NULL));
 	fs::path resultPath = getAppPath() / buff;
-#else
-	fs::path resultPath = fs::unique_path( getAppPath() / "cinder_streamFileTest-%%%%-%%%%-%%%%-%%%%" );
-#endif
+
 	FILE *f = fopen( resultPath.string().c_str(), "wb" );
 	for( size_t d = 0; d < DATA_SIZE; ++d ) {
 		uint8_t b = d % 256;
